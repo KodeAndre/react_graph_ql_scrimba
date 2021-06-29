@@ -1,11 +1,26 @@
 import React from "react"
+import ApolloClient from 'apollo-boost';
+import { ApolloProvider } from '@apollo/react-hooks'
+// eslint-disable-next-line
+import Style from "./style.css"
 
-function App() {
+import PokemonsContainer from './containers/PokemonsContainer'
+
+export default function App() {
+  const client = new ApolloClient({
+    uri: 'https://graphql-pokemon2.vercel.app/'
+  });
+
   return (
-    <div className="App">
-      <h1>hello world</h1>
+    <div>
+      <ApolloProvider client={client}>
+        <main>
+          <PokemonsContainer />
+        </main>
+      </ApolloProvider>
     </div>
   );
 }
 
-export default App;
+
+// https://graphql-pokemon2.vercel.app/
