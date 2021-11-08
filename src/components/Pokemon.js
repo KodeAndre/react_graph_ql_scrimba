@@ -10,8 +10,8 @@ export function Pokemon({ pokemon }) {
                 </div>
 
                 <div className="pokemon__meta">
-                    <p>Max HP: {pokemon.maxHP}</p>
-                    <p>Max CP: {pokemon.maxCP}</p>
+                    <h4>Max HP: {pokemon.maxHP}</h4>
+                    <h4>Max CP: {pokemon.maxCP}</h4>
                 </div>
 
                 <div className="pokemon__image">
@@ -20,7 +20,7 @@ export function Pokemon({ pokemon }) {
 
                 <div className="pokemon__attacks">
                     {pokemon.attacks.special.slice(0, 3).map(attacks => 
-                    <p key={`${attacks.name}-${attacks.damage}`}>Name: {attacks.name} Power: {attacks.damage}</p>
+                    <p key={`${attacks.name}-${attacks.damage}`}>Name: <b>{attacks.name}</b> Power: <b>{attacks.damage}</b></p>
                     )}
                 </div>
             </div>
