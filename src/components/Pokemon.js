@@ -15,7 +15,7 @@ export function Pokemon({ pokemon }) {
                 </div>
 
                 <div className="pokemon__image">
-                    <img src={pokemon.image}></img>
+                    <img src={pokemon.image} alt=""></img>
                 </div>
 
                 <div className="pokemon__attacks">

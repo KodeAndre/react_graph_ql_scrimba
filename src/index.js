@@ -6,9 +6,9 @@ import { BrowserRouter as Router, Switch, Route, Link, Redirect, useHistory} fro
 
 ReactDOM.render(
   <React.StrictMode>
-  <Router basename="react_graph_ql_scrimba">
-    <App />
-  </Router>
+    <Router basename="react_graph_ql_scrimba">
+      <App />
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );
