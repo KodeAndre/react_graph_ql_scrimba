@@ -3,6 +3,8 @@ import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from '@apollo/react-hooks'
 // eslint-disable-next-line
 import Style from "./style.css"
+// eslint-disable-next-line
+import { BrowserRouter as Router, Switch, Route, Link, Redirect, useHistory} from 'react-router-dom';
 
 import PokemonsContainer from './containers/PokemonsContainer'
 
@@ -13,11 +15,17 @@ export default function App() {
 
   return (
     <div>
-      <ApolloProvider client={client}>
-        <main>
-          <PokemonsContainer />
-        </main>
-      </ApolloProvider>
+      <Router>
+        <ApolloProvider client={client}>
+          <main>
+            <Switch>
+              <Route exact path="/">
+                <PokemonsContainer />
+              </Route>
+            </Switch>
+          </main>
+        </ApolloProvider>
+      </Router>
     </div>
   );
 }
